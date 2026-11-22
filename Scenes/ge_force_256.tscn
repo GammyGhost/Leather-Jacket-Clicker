@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://lqe0j35kw8fb"]
+
+[ext_resource type="PackedScene" uid="uid://bcjg4pnwbfjmt" path="res://Scenes/upgrade_template.tscn" id="1_5ajk1"]
+[ext_resource type="Script" uid="uid://umy1ophx8g01" path="res://Scripts/ge_force_256.gd" id="1_icjpo"]
+[ext_resource type="FontFile" uid="uid://cgs4i01iy3ten" path="res://Assets/Axolotl.ttf" id="2_os3tg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wbyq8"]
+font = ExtResource("2_os3tg")
+font_size = 50
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_utjcp"]
+font = ExtResource("2_os3tg")
+font_size = 40
+font_color = Color(0.82606, 0.82606006, 0.82606, 1)
+
+[node name="GeForce-256" type="Control" unique_id=33675363]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -956.0
+offset_bottom = -556.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_icjpo")
+
+[node name="Upgrade-template" parent="." unique_id=1204393256 instance=ExtResource("1_5ajk1")]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 195.0
+offset_bottom = 91.0
+
+[node name="Item-Name" type="Label" parent="Upgrade-template" unique_id=988699438]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -7.0
+offset_right = 192.0
+offset_bottom = 35.0
+text = "GeForce 256"
+label_settings = SubResource("LabelSettings_wbyq8")
+horizontal_alignment = 1
+
+[node name="per-click-or-per-sec" type="Label" parent="Upgrade-template" unique_id=595156769]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 27.0
+offset_right = 94.0
+offset_bottom = 52.0
+text = "+1 Per Click "
+label_settings = SubResource("LabelSettings_utjcp")
+
+[node name="Button" type="Button" parent="Upgrade-template" unique_id=633710164]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 58.0
+offset_right = 183.0
+offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("2_os3tg")
+theme_override_font_sizes/font_size = 25
+text = "25 AI Chips"

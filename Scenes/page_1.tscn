@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://cjk17rrpapl3a"]
+
+[ext_resource type="Script" uid="uid://bawem76fimtac" path="res://Scripts/page_1.gd" id="1_is161"]
+[ext_resource type="Texture2D" uid="uid://67ge2tdpwvla" path="res://Assets/bg.jpg" id="1_tp46o"]
+[ext_resource type="Texture2D" uid="uid://c5yhgpudaif5l" path="res://Assets/jensen_huang.png" id="2_uo4aw"]
+[ext_resource type="Script" uid="uid://d4iq0kuxtkg3q" path="res://Scripts/rich_text_label.gd" id="3_is161"]
+[ext_resource type="FontFile" uid="uid://cgs4i01iy3ten" path="res://Assets/Axolotl.ttf" id="3_uo4aw"]
+[ext_resource type="AudioStream" uid="uid://bhuy36og1rl3l" path="res://Assets/pew-pew-disparo.mp3" id="6_4tthn"]
+
+[node name="page-1" type="Control" unique_id=2050805312 node_paths=PackedStringArray("next_sound")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_is161")
+next_sound = NodePath("PewPewDisparo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1740086829]
+position = Vector2(614, 328)
+scale = Vector2(0.79975504, 0.78163266)
+texture = ExtResource("1_tp46o")
+
+[node name="JensenHuang" type="Sprite2D" parent="." unique_id=1222712395]
+position = Vector2(147, 315)
+scale = Vector2(0.8573487, 0.8717579)
+texture = ExtResource("2_uo4aw")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1430788243]
+layout_mode = 0
+offset_left = 361.0
+offset_top = 261.0
+offset_right = 1096.0
+offset_bottom = 520.0
+theme_override_fonts/normal_font = ExtResource("3_uo4aw")
+theme_override_fonts/bold_font = ExtResource("3_uo4aw")
+theme_override_font_sizes/normal_font_size = 60
+text = "You were the ceo of a GPU company Now U got expeled."
+script = ExtResource("3_is161")
+
+[node name="Button" type="Button" parent="." unique_id=533084405]
+layout_mode = 0
+offset_left = 819.0
+offset_top = 478.0
+offset_right = 1052.0
+offset_bottom = 565.0
+theme_override_fonts/font = ExtResource("3_uo4aw")
+theme_override_font_sizes/font_size = 80
+text = "Next"
+
+[node name="Timer" type="Timer" parent="." unique_id=1587001325]
+wait_time = 4.0
+autostart = true
+
+[node name="PewPewDisparo" type="AudioStreamPlayer" parent="." unique_id=1234449297]
+stream = ExtResource("6_4tthn")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

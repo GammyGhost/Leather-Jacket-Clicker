@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://bd2rk774dtkq1"]
+
+[ext_resource type="Script" uid="uid://cme48mb8y8rmf" path="res://Scripts/chinese_spy.gd" id="1_vda0w"]
+[ext_resource type="PackedScene" uid="uid://bcjg4pnwbfjmt" path="res://Scenes/upgrade_template.tscn" id="2_0r1dt"]
+[ext_resource type="FontFile" uid="uid://cgs4i01iy3ten" path="res://Assets/Axolotl.ttf" id="3_6u86s"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qjnww"]
+font = ExtResource("3_6u86s")
+font_size = 38
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_utjcp"]
+font = ExtResource("3_6u86s")
+font_size = 40
+font_color = Color(0.82606, 0.82606006, 0.82606, 1)
+
+[node name="Chinese-spy" type="Control" unique_id=33675363]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -956.0
+offset_bottom = -556.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vda0w")
+cost = 500000
+per_click_gain = 10000
+
+[node name="Upgrade-template" parent="." unique_id=1204393256 instance=ExtResource("2_0r1dt")]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 195.0
+offset_bottom = 91.0
+
+[node name="Item-Name" type="Label" parent="Upgrade-template" unique_id=988699438]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 197.0
+offset_bottom = 41.0
+theme_override_font_sizes/font_size = 40
+text = "Chinese Spy"
+label_settings = SubResource("LabelSettings_qjnww")
+horizontal_alignment = 1
+
+[node name="per-click-or-per-sec" type="Label" parent="Upgrade-template" unique_id=595156769]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 24.0
+offset_right = 193.0
+offset_bottom = 57.0
+text = "+10000 Per Click"
+label_settings = SubResource("LabelSettings_utjcp")
+
+[node name="Button" type="Button" parent="Upgrade-template" unique_id=633710164]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 58.0
+offset_right = 183.0
+offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("3_6u86s")
+theme_override_font_sizes/font_size = 25
+text = "500k AI Chips"

@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://d3gqdmkidsleq"]
+
+[ext_resource type="Script" uid="uid://dpjgtojcitrm6" path="res://Scripts/ex_vice_president.gd" id="1_vt0yd"]
+[ext_resource type="PackedScene" uid="uid://bcjg4pnwbfjmt" path="res://Scenes/upgrade_template.tscn" id="2_r6mct"]
+[ext_resource type="FontFile" uid="uid://cgs4i01iy3ten" path="res://Assets/Axolotl.ttf" id="3_bq2bk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_s4ed0"]
+font = ExtResource("3_bq2bk")
+font_size = 25
+outline_size = 5
+outline_color = Color(0.03137255, 0.011764706, 0.007843138, 0.99215686)
+
+[sub_resource type="LabelSettings" id="LabelSettings_utjcp"]
+font = ExtResource("3_bq2bk")
+font_size = 40
+font_color = Color(0.82606, 0.82606006, 0.82606, 1)
+
+[node name="Ex-Vice-President" type="Control" unique_id=33675363]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -956.0
+offset_bottom = -556.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vt0yd")
+cost = 75000
+per_sec_gain = 1000
+
+[node name="Upgrade-template" parent="." unique_id=1204393256 instance=ExtResource("2_r6mct")]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 195.0
+offset_bottom = 91.0
+
+[node name="Item-Name" type="Label" parent="Upgrade-template" unique_id=988699438]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 186.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_bq2bk")
+theme_override_font_sizes/font_size = 25
+text = "Ex Vice President Baddie"
+label_settings = SubResource("LabelSettings_s4ed0")
+horizontal_alignment = 1
+
+[node name="per-click-or-per-sec" type="Label" parent="Upgrade-template" unique_id=595156769]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 24.0
+offset_right = 170.0
+offset_bottom = 57.0
+text = "+1000 Per Sec"
+label_settings = SubResource("LabelSettings_utjcp")
+
+[node name="Button" type="Button" parent="Upgrade-template" unique_id=633710164]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 58.0
+offset_right = 183.0
+offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("3_bq2bk")
+theme_override_font_sizes/font_size = 25
+text = "75k AI Chips"

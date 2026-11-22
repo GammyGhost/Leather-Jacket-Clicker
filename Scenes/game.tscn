@@ -1,0 +1,325 @@
+[gd_scene format=3 uid="uid://ci2oa2t46s5h1"]
+
+[ext_resource type="Script" uid="uid://boixrv0uokyqk" path="res://Scripts/game.gd" id="1_7nbq1"]
+[ext_resource type="Texture2D" uid="uid://67ge2tdpwvla" path="res://Assets/bg.jpg" id="1_qxrlw"]
+[ext_resource type="FontFile" uid="uid://cgs4i01iy3ten" path="res://Assets/Axolotl.ttf" id="2_wrm1d"]
+[ext_resource type="AudioStream" uid="uid://b07on8uxpam66" path="res://Assets/bg-music.mp3" id="3_wrm1d"]
+[ext_resource type="PackedScene" uid="uid://c3xonji5o3aql" path="res://Scenes/leather_jacket_ceo.tscn" id="4_3dryh"]
+[ext_resource type="Script" uid="uid://cjfrvjsyggnyc" path="res://Scripts/leather_jacket_ceo.gd" id="5_i6g32"]
+[ext_resource type="PackedScene" uid="uid://lqe0j35kw8fb" path="res://Scenes/ge_force_256.tscn" id="5_wowpa"]
+[ext_resource type="AudioStream" uid="uid://ce0k7twjpkcgj" path="res://Assets/mario-bounce.mp3" id="7_1l0tm"]
+[ext_resource type="PackedScene" uid="uid://botsdr3fhn0hi" path="res://Scenes/rtx_4050.tscn" id="7_rfjv2"]
+[ext_resource type="PackedScene" uid="uid://batmfkoih1a5e" path="res://Scenes/gtx_1080_ti.tscn" id="7_v158k"]
+[ext_resource type="PackedScene" uid="uid://dnea1nrsfkus" path="res://Scenes/rtx_5090.tscn" id="8_1phco"]
+[ext_resource type="PackedScene" uid="uid://um6ku5kw46ml" path="res://Scenes/rtx_3050.tscn" id="8_o5yvi"]
+[ext_resource type="PackedScene" uid="uid://cb7h2sym3biuc" path="res://Scenes/rtx_2060.tscn" id="8_rku1e"]
+[ext_resource type="AudioStream" uid="uid://bhuy36og1rl3l" path="res://Assets/pew-pew-disparo.mp3" id="9_ldgsr"]
+[ext_resource type="PackedScene" uid="uid://cn83vkfmvryjy" path="res://Scenes/badie_employee.tscn" id="9_nb51f"]
+[ext_resource type="PackedScene" uid="uid://d3gqdmkidsleq" path="res://Scenes/ex_vice_president.tscn" id="10_nnt18"]
+[ext_resource type="AudioStream" uid="uid://dhvw2reobq20v" path="res://Assets/money-soundfx.mp3" id="10_o5yvi"]
+[ext_resource type="PackedScene" uid="uid://bd2rk774dtkq1" path="res://Scenes/chinese_spy.tscn" id="11_ewbju"]
+[ext_resource type="PackedScene" uid="uid://dxfyorkm21ujj" path="res://Scenes/donald_trump.tscn" id="12_85qyi"]
+[ext_resource type="Script" uid="uid://il6xwwsoo6m" path="res://Scripts/text.gd" id="19_iivbl"]
+[ext_resource type="Script" uid="uid://bn44kjpn1sebh" path="res://Scripts/chinese_baddie_text.gd" id="21_exi56"]
+[ext_resource type="Texture2D" uid="uid://bhgtov1hrked1" path="res://Assets/images.jpeg" id="22_7t8sx"]
+[ext_resource type="Script" uid="uid://c5gvgd4rxp1ji" path="res://Scripts/chinese_png.gd" id="23_mg4q0"]
+[ext_resource type="Texture2D" uid="uid://d4lqedjdqbvec" path="res://Assets/photo.jpg" id="24_22asu"]
+[ext_resource type="Script" uid="uid://b26723873cfse" path="res://Scripts/photo.gd" id="25_fkdbe"]
+[ext_resource type="Texture2D" uid="uid://cfh5g07rehcco" path="res://Assets/real-baddie.jpg" id="26_fkdbe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_utjcp"]
+size = Vector2(1636.4202, 76.94771)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wbyq8"]
+font = ExtResource("2_wrm1d")
+font_size = 80
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Game" type="Control" unique_id=1585746419]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7nbq1")
+
+[node name="Bg" type="Area2D" parent="." unique_id=541966081]
+position = Vector2(458.49997, 333)
+scale = Vector2(0.5848132, 0.6999999)
+
+[node name="Sprite2D" type="Sprite2D" parent="Bg" unique_id=1358390116]
+position = Vector2(23.084349, -12.857147)
+texture = ExtResource("1_qxrlw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bg" unique_id=792728114]
+position = Vector2(-2.5648675, -382.85718)
+shape = SubResource("RectangleShape2D_utjcp")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Bg" unique_id=1337371427]
+position = Vector2(12.824657, 291.42862)
+shape = SubResource("RectangleShape2D_utjcp")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Bg" unique_id=359393052]
+position = Vector2(-816.50006, 15.714295)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_utjcp")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Bg" unique_id=1912142675]
+position = Vector2(807.0954, 41.42856)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_utjcp")
+
+[node name="aichipspersec" type="ColorRect" parent="." unique_id=506474215]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 571.0
+offset_right = 887.0
+offset_bottom = 637.0
+color = Color(0.09803922, 0.039215688, 0.16862746, 1)
+
+[node name="Label" type="Label" parent="aichipspersec" unique_id=1487368066]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -247.5
+offset_top = -35.0
+offset_right = 251.5
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_wrm1d")
+theme_override_font_sizes/font_size = 70
+text = "AI CHIPS PER SECOND : 0"
+
+[node name="Upgrade-menu" type="ColorRect" parent="." unique_id=830493771]
+layout_mode = 0
+offset_left = 894.0
+offset_top = -14.0
+offset_right = 1173.0
+offset_bottom = 668.0
+color = Color(0.34117648, 0.09803922, 0.47843137, 1)
+
+[node name="upgrade-text" type="Label" parent="Upgrade-menu" unique_id=1194585872]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 23.0
+offset_right = 244.0
+offset_bottom = 173.0
+text = "Upgrades"
+label_settings = SubResource("LabelSettings_wbyq8")
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Upgrade-menu" unique_id=114502754]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 21.0
+offset_top = 104.0
+offset_right = -46.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Upgrade-menu/ScrollContainer" unique_id=2142369047]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 110
+
+[node name="GeForce-256" parent="Upgrade-menu/ScrollContainer/VBoxContainer" unique_id=300999834 node_paths=PackedStringArray("per_click_label", "purchase_sound") instance=ExtResource("5_wowpa")]
+layout_mode = 2
+per_click_label = NodePath("../../../../aichipsperclick/Label")
+purchase_sound = NodePath("../../../../buy-sound")
+
+[node name="GTX-1080ti" parent="Upgrade-menu/ScrollContainer/VBoxContainer" unique_id=1115183726 node_paths=PackedStringArray("per_sec_label", "purchase_sound") instance=ExtResource("7_v158k")]
+layout_mode = 2
+cost = 100
+per_sec_label = NodePath("../../../../aichipspersec/Label")
+purchase_sound = NodePath("../../../../buy-sound")
+
+[node name="RTX-2060" parent="Upgrade-menu/ScrollContainer/VBoxContainer" unique_id=1372214803 node_paths=PackedStringArray("per_sec_label", "purchase_sound") instance=ExtResource("8_rku1e")]
+layout_mode = 2
+per_sec_label = NodePath("../../../../aichipspersec/Label")
+purchase_sound = NodePath("../../../../buy-sound")
+
+[node name="RTX 3050" parent="Upgrade-menu/ScrollContainer/VBoxContainer" unique_id=1923100140 node_paths=PackedStringArray("per_click_label", "purchase_sound") instance=ExtResource("8_o5yvi")]
+layout_mode = 2
+per_click_label = NodePath("../../../../aichipsperclick/Label")
+purchase_sound = NodePath("../../../../buy-sound")
+
+[node name="RTX 4050" parent="Upgrade-menu/ScrollContainer/VBoxContainer" unique_id=1794922324 node_paths=PackedStringArray("per_click_label", "purchase_sound") instance=ExtResource("7_rfjv2")]
+layout_mode = 2
+per_click_label = NodePath("../../../../aichipsperclick/Label")
+purchase_sound = NodePath("../../../../buy-sound")
+
+[node name="RTX 5090" parent="Upgrade-menu/ScrollContainer/VBoxContainer" unique_id=33675363 node_paths=PackedStringArray("per_sec_label", "purchase_sound") instance=ExtResource("8_1phco")]
+layout_mode = 2
+per_sec_label = NodePath("../../../../aichipspersec/Label")
+purchase_sound = NodePath("../../../../buy-sound")
+
+[node name="Badie-Employee" parent="Upgrade-menu/ScrollContainer/VBoxContainer" unique_id=2117189634 node_paths=PackedStringArray("per_click_label", "purchase_sound") instance=ExtResource("9_nb51f")]
+layout_mode = 2
+per_click_label = NodePath("../../../../aichipsperclick/Label")
+purchase_sound = NodePath("../../../../buy-sound")
+
+[node name="Ex-Vice-President" parent="Upgrade-menu/ScrollContainer/VBoxContainer" unique_id=1381413386 instance=ExtResource("10_nnt18")]
+layout_mode = 2
+
+[node name="Chinese-spy" parent="Upgrade-menu/ScrollContainer/VBoxContainer" unique_id=1183363120 instance=ExtResource("11_ewbju")]
+layout_mode = 2
+
+[node name="donaldTrump" parent="Upgrade-menu/ScrollContainer/VBoxContainer" unique_id=1763136493 node_paths=PackedStringArray("purchase_sound") instance=ExtResource("12_85qyi")]
+layout_mode = 2
+cost = 500000
+purchase_sound = NodePath("../../../../buy-sound")
+
+[node name="RTX 4051" parent="Upgrade-menu/ScrollContainer/VBoxContainer" unique_id=567713093 node_paths=PackedStringArray("per_click_label", "purchase_sound") instance=ExtResource("7_rfjv2")]
+layout_mode = 2
+per_click_label = NodePath("../../../../aichipsperclick/Label")
+purchase_sound = NodePath("../../../../buy-sound")
+
+[node name="bg-music" type="AudioStreamPlayer" parent="." unique_id=721593253]
+stream = ExtResource("3_wrm1d")
+autoplay = true
+
+[node name="Leather-Jacket-CEO" parent="." unique_id=902456 node_paths=PackedStringArray("click_sound", "chips_label", "per_click_label") instance=ExtResource("4_3dryh")]
+position = Vector2(456, 292)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("5_i6g32")
+click_sound = NodePath("../pew")
+chips_label = NodePath("../aichips-label/Label")
+per_click_label = NodePath("../aichipsperclick/Label")
+
+[node name="aichips-label" type="ColorRect" parent="." unique_id=762241882]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 9.0
+offset_right = 887.0
+offset_bottom = 88.0
+color = Color(0.09803922, 0.039215688, 0.16862746, 1)
+
+[node name="Label" type="Label" parent="aichips-label" unique_id=511965482]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -32.5
+offset_right = 150.0
+offset_bottom = 32.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_wrm1d")
+theme_override_font_sizes/font_size = 80
+text = "AI CHIPS : 0"
+
+[node name="aichipsperclick" type="ColorRect" parent="." unique_id=608792682]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 515.0
+offset_right = 886.0
+offset_bottom = 581.0
+color = Color(0.09803922, 0.039215688, 0.16862746, 1)
+
+[node name="Label" type="Label" parent="aichipsperclick" unique_id=1590999976]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -247.5
+offset_top = -35.0
+offset_right = 251.5
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_wrm1d")
+theme_override_font_sizes/font_size = 70
+text = "AI CHIPS PER CLICK : 1"
+
+[node name="bounce-music" type="AudioStreamPlayer" parent="." unique_id=1684013335]
+stream = ExtResource("7_1l0tm")
+volume_db = -8.0
+
+[node name="pew" type="AudioStreamPlayer" parent="." unique_id=664405951]
+stream = ExtResource("9_ldgsr")
+volume_db = 3.0
+
+[node name="buy-sound" type="AudioStreamPlayer" parent="." unique_id=1296251603]
+stream = ExtResource("10_o5yvi")
+volume_db = 6.0
+
+[node name="labels" type="Node" parent="." unique_id=1135924906]
+
+[node name="Timer" type="Timer" parent="labels" unique_id=1759783270]
+
+[node name="text" type="Label" parent="labels" unique_id=2134168904]
+offset_left = 127.0
+offset_top = 127.0
+offset_right = 817.0
+offset_bottom = 192.0
+theme_override_fonts/font = ExtResource("2_wrm1d")
+theme_override_font_sizes/font_size = 80
+text = "You Made America Great Again"
+script = ExtResource("19_iivbl")
+
+[node name="chinese-baddie-text" type="Label" parent="labels" unique_id=941263448]
+offset_left = 152.0
+offset_top = 128.0
+offset_right = 772.0
+offset_bottom = 193.0
+theme_override_fonts/font = ExtResource("2_wrm1d")
+theme_override_font_sizes/font_size = 80
+text = "Buy more to See more."
+script = ExtResource("21_exi56")
+
+[node name="chinese-png" type="Sprite2D" parent="labels" unique_id=1089119468]
+position = Vector2(457.5, 286.75)
+scale = Vector2(0.21449704, 0.24078336)
+texture = ExtResource("22_7t8sx")
+script = ExtResource("23_mg4q0")
+
+[node name="badies-timer" type="Timer" parent="labels" unique_id=715173235]
+wait_time = 0.5
+
+[node name="Photo" type="Sprite2D" parent="labels" unique_id=899771440]
+position = Vector2(458.00003, 270)
+scale = Vector2(0.14791666, 0.10000001)
+texture = ExtResource("24_22asu")
+script = ExtResource("25_fkdbe")
+
+[node name="employ" type="Label" parent="labels" unique_id=1199718624]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "I don'nt Have the photo."
+
+[node name="baddie" type="Label" parent="labels" unique_id=2048772734]
+offset_left = 116.0
+offset_top = 127.0
+offset_right = 983.0
+offset_bottom = 230.0
+theme_override_fonts/font = ExtResource("2_wrm1d")
+theme_override_font_sizes/font_size = 60
+text = "     This is the real Baddie Not the 
+Chinese One Our CEO got very bad taste."
+
+[node name="RealBaddie" type="Sprite2D" parent="labels" unique_id=1942601986]
+position = Vector2(496.12497, 294.5)
+scale = Vector2(0.28507, 0.2670683)
+texture = ExtResource("26_fkdbe")
+
+[connection signal="input_event" from="Leather-Jacket-CEO" to="Leather-Jacket-CEO" method="_on_input_event"]
+[connection signal="timeout" from="labels/Timer" to="Upgrade-menu/ScrollContainer/VBoxContainer/Badie-Employee" method="_on_timer_timeout"]
+[connection signal="timeout" from="labels/Timer" to="Upgrade-menu/ScrollContainer/VBoxContainer/Ex-Vice-President" method="_on_timer_timeout"]
+[connection signal="timeout" from="labels/Timer" to="Upgrade-menu/ScrollContainer/VBoxContainer/Chinese-spy" method="_on_timer_timeout"]
+[connection signal="timeout" from="labels/Timer" to="Upgrade-menu/ScrollContainer/VBoxContainer/donaldTrump" method="_on_timer_timeout"]
+[connection signal="timeout" from="labels/badies-timer" to="Upgrade-menu/ScrollContainer/VBoxContainer/Chinese-spy" method="_on_badiestimer_timeout"]
